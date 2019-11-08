@@ -1,0 +1,21 @@
+
+
+<div class="container">
+  <app-table
+    [contents]="users"
+    [settings]="projectSettings"
+  ></app-table>
+  <hr>
+</div>
+<ul class="nav nav-pills pb-2">
+  <li class="nav-item" *ngFor="let p of pages" style="cursor: pointer">
+    <a class="nav-link" (click)="getPage(p, $event)" [ngClass]="{'active': p == page}">{{p}}</a>
+  </li>
+</ul>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+

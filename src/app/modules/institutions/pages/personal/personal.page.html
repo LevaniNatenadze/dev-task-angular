@@ -1,0 +1,38 @@
+
+<ng-container *ngIf="personal.length !== 0; else notFoundPersonal">
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th colspan="col">PersonId</th>
+            <th  colspan="col">Name</th>
+            <th  colspan="col">Pid</th>
+            <th  colspan="col">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let per of personal">
+            <td>{{per.id}}</td>
+            <td>{{per.name}}</td>
+            <td>{{per.pid}}</td>
+            <td>
+                <button class="btn btn-info" [routerLink]="[]">Detail</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</ng-container>
+
+<ng-template #notFoundPersonal>
+    <p>Personal Not Found</p>
+</ng-template>
+
+
+<!--
+ "id": 6,
+    "name": "dasdg afg sf",
+    "pid": "123",
+    "branch_id": 15,
+    "created_at": "2019-07-12 15:19:20",
+    "updated_at": "2019-07-12 15:19:20"
+
+-->

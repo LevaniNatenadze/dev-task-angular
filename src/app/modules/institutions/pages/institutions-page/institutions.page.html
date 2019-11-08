@@ -1,0 +1,11 @@
+
+<button mat-button class="create_btn" [routerLink]="['create']">Create Institution</button>
+<app-table [data]="institutions.data"></app-table>
+<ul class="nav nav-pills pb-2 m-custom">
+  <li class="nav-item" *ngFor="let p of pages" style="cursor: pointer">
+    <a class="nav-link" (click)="getInstitutions(p)" [ngClass]="{'active': p == institutions.current_page}">{{p}}</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
+

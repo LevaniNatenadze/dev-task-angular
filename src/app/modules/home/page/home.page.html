@@ -1,0 +1,9 @@
+
+<ul class="list-group mt-3">
+  <li class="list-group-item list-group-item-action" [routerLink]="'/users'" *ngIf="Permission('read_users')">
+    მომხმარებლების სია
+  </li>
+</ul>
+
+
+<router-outlet></router-outlet>

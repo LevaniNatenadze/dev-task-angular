@@ -1,0 +1,9 @@
+mat-table {
+  padding: 50px 60px;
+  margin-left: 100px;
+}
+
+mat-table mat-header-cell,
+mat-table mat-cell {
+  margin-right: 30px;
+}

@@ -1,0 +1,23 @@
+
+<div class="branches__header">
+    <h3 class="branches__title">Branches</h3>
+</div>
+
+
+
+<ng-container *ngIf="branches.length !== 0; else notFoundBranches">
+    <mat-card *ngFor="let b of branches">
+        <mat-card-header>
+            <mat-card-title>{{b.address}}</mat-card-title>
+            <mat-card-subtitle>Manager{{b.manager_name}}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-actions>
+            <button mat-button [routerLink]="[b.id, 'personal']">Personal</button>
+        </mat-card-actions>
+    </mat-card>
+</ng-container>
+
+<ng-template #notFoundBranches>
+    <p class="not-found__message">branches not found</p>
+    <button mat-button routerLink="/institutions">Back</button>
+</ng-template>

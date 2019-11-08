@@ -1,0 +1,26 @@
+
+
+
+<ng-container *ngIf="institution">
+    <mat-card>
+        <mat-toolbar>
+            {{institution.id}}th institution's details
+        </mat-toolbar>
+        <mat-card-content>
+            <ul>
+                <li>institution Id: {{institution.id}}</li>
+                <li>institution Name: {{institution.name}}</li>
+                <li>institution Pid: {{institution.pid}}</li>
+                <li>institution Number: {{institution.number}}</li>
+            </ul>
+
+            <mat-card-actions>
+                <button mat-button [routerLink]="['branches']">Branches</button>
+            </mat-card-actions>
+        </mat-card-content>
+        <mat-card-subtitle>
+            Created At {{institution.created_at}}
+        </mat-card-subtitle>
+    </mat-card>
+</ng-container>
+<router-outlet></router-outlet>

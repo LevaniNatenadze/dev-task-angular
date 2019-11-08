@@ -1,0 +1,27 @@
+<a class="btn btn-info m-4"  role="button" routerLink="create">create User</a>
+
+<table class="table table-bordered">
+  <thead>
+  <tr>
+    <th *ngFor="let map of columnMaps">{{ map.header }}</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let content of contents">
+    <td *ngFor="let map of columnMaps"
+        [appStyleCell]="content[map.access(content)]">
+      {{ content[map.access(content)] }}
+    </td>
+    <td>
+      <button class="btn btn-primary" routerLink=":userId">Edit</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+
+
+
+
+
