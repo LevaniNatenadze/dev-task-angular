@@ -1,0 +1,16 @@
+
+
+
+<form class="border p-3 mt-3" [formGroup]="branchForm" (submit)="createBranch()">
+
+    <div class="form-group">
+        <label>address</label>
+        <input type="text" formControlName="address" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Manager Name</label>
+        <input type="text" formControlName="name" class="manager_name">
+    </div>
+
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>

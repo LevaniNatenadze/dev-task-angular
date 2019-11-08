@@ -11,6 +11,9 @@ import { BranchesComponent } from './pages/branches/branches.component';
 import { PersonalPage } from './pages/personal/personal.page';
 import { PersonalDetailsComponent } from './pages/personal/components/personal-details/personal-details.component';
 import { CreateComponent } from './pages/create/create.component';
+import { CreateBranchComponent } from './pages/branches/create-branch/create-branch.component';
+import { UpdateBranchComponent } from './pages/branches/update-branch/update-branch.component';
+import { BranchFormComponent } from './pages/branches/branch-form/branch-form.component';
 
 
 
@@ -23,7 +26,10 @@ import { CreateComponent } from './pages/create/create.component';
     BranchesComponent,
     PersonalPage,
     PersonalDetailsComponent,
-    CreateComponent
+    CreateComponent,
+    CreateBranchComponent,
+    UpdateBranchComponent,
+    BranchFormComponent
   ],
     imports: [
         CommonModule,

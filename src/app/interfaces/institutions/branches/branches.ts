@@ -8,3 +8,9 @@ export interface Branches {
   updated_at: string;
 
 }
+
+
+export interface Branch {
+  address: string;
+  manager_name: string;
+}

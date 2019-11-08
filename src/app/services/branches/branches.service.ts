@@ -1,7 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Branches} from "../../interfaces/institutions/branches/branches";
+import {Branch, Branches} from "../../interfaces/institutions/branches/branches";
 import {API_BASE_URL} from "../../auth/token";
 
 @Injectable({
@@ -18,6 +18,10 @@ export class BranchesService {
 
   getBranches(instId: number):Observable<Branches> {
     return this.httpClient.get<Branches>(`${this.base_url}/institutions/${instId}/branches`)
+  }
+
+  createBranch(branch: Branch, instId): Observable<Branches> {
+    return this.httpClient.post<Branches>(`${this.base_url}/institutions/${instId}/branches/create`, branch);
   }
 
 }
